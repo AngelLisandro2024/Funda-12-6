@@ -1,0 +1,205 @@
+{% extends "./base.html" %}
+
+{% block titulo %} ¿QUIENES SOMOS? {% endblock %}
+
+{% block contenidobase %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiénes Somos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+          background: linear-gradient(90deg, #121959, #172179, #384194);
+          color: white;
+          text-align: center;
+          padding-top: 50px;
+          position: relative;
+        }
+
+        body::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('static/imagenes/funda2.jpg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: top center;
+          opacity: 0.20; /* Ajusta la opacidad para un efecto más sutil */
+          z-index: -1;
+        }
+        .container {
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+        }
+        .btn-custom {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+    </style>
+<nav id="barra" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- FUNDASALUD -->
+    <a id="barratitulo" class="navbar-brand me-2" href="#">FUNDASALUD</a>
+    
+              </li>
+                <a class="" href="/inicio">INICIO</a>
+              </li>
+              
+<a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="dropdown">
+  <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="dropdown-menu" id="colormenu">
+    <li><a class="dropdown-item" href="/inicio">Inicio</a></li>
+    <li><a class="dropdown-item" href="/quienes">¿Quiénes somos?</a></li>
+    <li><a class="dropdown-item" href="/vista_jornadas">Jornadas</a></li>
+    <li><a class="dropdown-item" href="/vista_publica">Noticias</a></li>
+    <li><a class="dropdown-item" href="/servicio">Servicios</a></li>
+    <li><a class="dropdown-item" href="/contacto">Contáctanos</a></li>
+  </ul>
+</div>
+                <a class="" href=""></a>
+              </li>   
+  </div>
+</nav>
+          <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="navbar-brand" aria-current="page" href="/inicio">INICIO</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="navbar-brand" href="/quienes">¿QUIENES SOMOS?</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/vista_jornadas">JORNADAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/vista_publica">NOTICIAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/servicio">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/contacto">CONTACTANOS</a>
+              </li> -->
+              
+<img src="/static/imagenes/cintillo.jpg" alt="cintillo" width="1260">
+</head>
+<body>
+
+    <div class="container">
+    <h1 class="display-2 fw-bold text-center">¿Quiénes Somos?</h1>
+    <h2 class="display-5 text-center">Un compromiso con la salud y el bienestar de Trujillo</h2>
+
+    <h3 class="mt-5 fw-bold">Nuestra Identidad</h3>
+    <h3 class="fs-4">En Fundasalud Trujillo somos mucho más que una institución; somos el corazón latente del sistema de salud pública en el estado Trujillo. Como la Fundación Trujillana de la Salud, una oficina gubernamental estatal, tenemos el compromiso inquebrantable de proporcionar asistencia médica integral y mejorar la calidad de vida de todos los trujillanos, poniendo un énfasis especial en aquellas comunidades y familias que más lo necesitan.</h3>
+
+    <h3 class="mt-5 fw-bold">Nuestra Historia y Compromiso</h3>
+    <h3 class="fs-4">La trayectoria de Fundasalud Trujillo ha sido forjada con dedicación y servicio. Nacimos con la visión de centralizar y optimizar los esfuerzos en salud pública, garantizando que los recursos lleguen a quienes más lo necesitan.</h3>
+    <h3 class="fs-4">Nuestro compromiso va más allá de la atención médica; se extiende a la promoción de la salud, la prevención de enfermedades y la educación comunitaria. Creemos firmemente que una población informada y consciente de su salud es una población más fuerte y resiliente.</h3>
+
+    <h3 class="mt-5 fw-bold">Nuestra Visión: Salud para Todos</h3>
+    <h3 class="fs-4">Nuestra visión en Fundasalud Trujillo es ser el pilar inamovible de la salud pública en el estado, un modelo de eficiencia, calidez y equidad. Aspiramos a un futuro donde la salud no sea una aspiración distante, sino una realidad tangible y un derecho universal.</h3>
+
+    <h3 class="mt-5 fw-bold">Nuestros Valores Fundamentales</h3>
+    <h3 class="fs-4">Cada acción que emprendemos está guiada por principios sólidos que definen quiénes somos y cómo operamos. Nuestra humanidad nos lleva a poner a la persona en el centro de nuestra atención, trabajando con equidad, compromiso social y profesionalismo. La transparencia y la innovación son nuestras herramientas para garantizar una gestión honesta y eficiente.</h3>
+
+    <h3 class="mt-5 fw-bold">Nuestro Equipo y Colaboradores</h3>
+    <h3 class="fs-4">Detrás de cada servicio de Fundasalud Trujillo hay un equipo humano excepcional: médicos, enfermeras, personal administrativo y de apoyo, todos comprometidos con la misión de mejorar la salud de nuestra gente. Además, trabajamos en colaboración con otras instituciones de salud, universidades y entes gubernamentales para ampliar nuestro impacto.</h3>
+
+    <h3 class="mt-5 text-center fw-bold">Invitación a la Comunidad</h2>
+    <h3 class="fs-3 text-center">Fundasalud Trujillo es tu fundación. Es el reflejo del compromiso del estado con la salud de sus ciudadanos. Te invitamos a conocer más sobre nuestra labor, participar en nuestras iniciativas y unirte a nosotros en la construcción de un Trujillo más sano y próspero.</h3>
+
+    <h1 class="text-center display-5 fw-bold mt-5">Tu salud es nuestra razón de ser.</h1>
+</div>
+
+<br><br><br>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/imagenes/funda.jpg" width="700"> <br>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/imagenes/funda2.jpg" width="700"> <br>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> <br><br><br>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="footer-area pt-60 pb-60 black-bg">
+    <div class="container">
+        <div class="row">
+            <!-- Información sobre los desarrolladores -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <h2 style="color: #ffffff;">WEB Desarrollada y Administrada por</h2>
+                        <p style="color: #ffffff; font-size: 20px;">
+                            Angel Fernandez, Jesus Montilla, Andres Mendoza.
+                        </p>
+                    </div>
+                    <br>
+                    <p style="color: #ffffff; font-size: 18px;">Copyright 2025</p> 
+                    <br>
+                    <a href="/crud" class="btn btn-success">Herramientas de desarrollador</a>
+                </div>
+            </div>
+
+            <!-- Ubicación y contacto -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 style="color: #ffffff;">Ubicación:</h3>
+                    <p style="color: #ffffff;">Dirección: FUNDASALUD está ubicada en el Estado Trujillo, municipio Trujillo, <br>Parroquia Cruz Carrillo Venezuela. Autopista Valera Trujillo.</p>
+                    <h3 style="color: #ffffff;">Teléfonos:</h3>
+                    <p style="color: #ffffff;">
+                        ***************  0272-2367898  *************<br>
+                        ***************  0412-5678987  *************<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="col-lg-4 col-md-12">
+                <div class="footer-widget">
+                    <h3 style="color: #ffffff;">Síguenos en nuestras redes sociales:</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/FundacionTrujillanaDeLaSalud/" target="_blank" style="color: #ffffff;"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://x.com/Fundasaludtru" target="_blank" style="color: #ffffff;"><i class="fab fa-twitter"></i> X</a></li>
+                        <li><a href="https://www.instagram.com/fundasaludtru/" target="_blank" style="color: #ffffff;"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

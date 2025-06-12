@@ -1,0 +1,67 @@
+{% extends "./base.html" %}
+
+{% block titulo %} Pagina Inicio de seccion {% endblock %}
+
+{% block contenidobase %}
+<nav id="barra" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- FUNDASALUD -->
+    <a id="barratitulo" class="navbar-brand me-2" href="#">FUNDASALUD</a>
+    
+              </li>
+                <a class="" href="/inicio">INICIO</a>
+              </li>
+              
+<a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="dropdown">
+  <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="dropdown-menu" id="colormenu">
+    <li><a class="dropdown-item" href="/inicio">Inicio</a></li>
+    <li><a class="dropdown-item" href="/quienes">¿Quiénes somos?</a></li>
+    <li><a class="dropdown-item" href="/vista_jornadas">Jornadas</a></li>
+    <li><a class="dropdown-item" href="/vista_publica">Noticias</a></li>
+    <li><a class="dropdown-item" href="/servicio">Servicios</a></li>
+    <li><a class="dropdown-item" href="/contacto">Contáctanos</a></li>
+  </ul>
+</div>
+                <a class="" href=""></a>
+              </li>   
+  </div>
+</nav>
+      <br><br><br><br><br><br>
+    <div class="iniciar"> <br>
+        <h2>
+            Logeo
+        </h2>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+{% if messages %}
+    <div class="alert alert-danger">
+        {% for category, message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+{% endwith %}
+        <form action="/logeo" method="POST" class="formulariosregistro">
+            <div class="login-form">
+				<div class="control-group">
+								<input type="text" class="login-field" value="" placeholder="Usuario" name="username">
+				<label class="login-field-icon fui-user" for="login-name"></label></div><br>
+				<div class="control-group">
+								<input type="password" class="login-field" value="" placeholder="contraseña" name="password">
+				<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+				<br>
+				<input type="submit" value="Acceder" class="btn btn-primary btn-large btn-block"> <br><br>
+    </div>
+</div>
+{% endblock %}
+
+	

@@ -1,0 +1,44 @@
+{% extends "./base.html" %}
+
+{% block titulo %} Editar Jornada Médica {% endblock %}
+
+{% block contenidobase %}
+<br><a type="button" class="btn btn-danger" href="/crud">Atras</a>
+<h1 class="text-center">Editar Jornada Médica</h1>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Título:</label>
+        {{ form.titulo(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción:</label>
+        {{ form.descripcion(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha:</label>
+        {{ form.fecha(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        <label for="hora" class="form-label">Hora:</label>
+        {{ form.hora(class="form-control") }} <!-- Nuevo campo -->
+    </div>
+
+    <div class="mb-3">
+        <label for="lugar" class="form-label">Lugar:</label>
+        {{ form.lugar(class="form-control") }} <!-- Nuevo campo -->
+    </div>
+
+    <div class="mb-3">
+        <label for="imagen" class="form-label">Actualizar Imagen:</label>
+        <input type="file" name="imagen" id="imagen" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+</form>
+
+{% endblock %}

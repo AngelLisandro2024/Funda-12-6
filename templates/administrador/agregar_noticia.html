@@ -1,0 +1,81 @@
+{% extends "./base.html" %}
+
+{% block titulo %} Registrar usuario {% endblock %}
+
+{% block contenidobase %}
+    <style>
+        #drop-zone {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+        #drop-zone.dragging {
+            border-color: #333;
+            color: #333;
+        }
+    </style>
+</head>
+<br><br> <a type="button" class="btn btn-danger" href="/crud">Atras</a>
+<body>
+    <div class="container mt-2">
+    <h1 class="text-center">Agregar Noticia</h1>
+    <form action="/agregar_noticia" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea name="descripcion" id="descripcion" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input type="date" name="fecha" id="fecha" class="form-control" required>
+        </div>
+        <div id="drop-zone" class="mb-3">
+            Arrastra tu imagen aquí o haz clic para subirla
+            <input type="file" name="imagen" id="imagen" style="display: none;" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Noticia</button>
+    </form>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    console.log("¡El DOM se ha cargado correctamente!");
+
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('imagen');
+
+    if (dropZone) {
+        console.log("Drop zone encontrada:", dropZone);
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            console.log("Arrastrando sobre el área");
+            dropZone.classList.add('dragging');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragging');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragging');
+            const files = e.dataTransfer.files;
+            console.log("Archivos arrastrados:", files);
+            if (files.length) {
+                fileInput.files = files;
+            }
+        });
+        } else {
+            console.log("Error: No se encontró el elemento con id 'drop-zone'");
+        }
+        });
+    </script>
+{% endblock %}

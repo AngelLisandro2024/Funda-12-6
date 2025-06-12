@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block titulo %} Registrar Usuario {% endblock %}
+
+{% block contenidobase %}
+</head>
+<nav id="barra" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- FUNDASALUD -->
+    <a id="barratitulo" class="navbar-brand me-2" href="#">FUNDASALUD</a>
+    
+              </li>
+                <a class="" href="/inicio">INICIO</a>
+              </li>
+              
+<a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="dropdown">
+  <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="dropdown-menu" id="colormenu">
+    <li><a class="dropdown-item" href="/inicio">Inicio</a></li>
+    <li><a class="dropdown-item" href="/quienes">¿Quiénes somos?</a></li>
+    <li><a class="dropdown-item" href="/vista_jornadas">Jornadas</a></li>
+    <li><a class="dropdown-item" href="/vista_publica">Noticias</a></li>
+    <li><a class="dropdown-item" href="/servicio">Servicios</a></li>
+    <li><a class="dropdown-item" href="/contacto">Contáctanos</a></li>
+  </ul>
+</div>
+                <a class="" href=""></a>
+              </li>   
+  </div>
+</nav>
+          <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="navbar-brand" aria-current="page" href="/inicio">INICIO</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="navbar-brand" href="/quienes">¿QUIENES SOMOS?</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/vista_jornadas">JORNADAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/vista_publica">NOTICIAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/servicio">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/contacto">CONTACTANOS</a>
+              </li> -->
+              <br><br>
+<img src="/static/imagenes/cintillo.jpg" alt="cintillo" width="1260">
+</head>
+<br><br>
+<h1 class="text-center">Registrar Usuario</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+        <label for="username">Nombre de usuario:</label>
+        {{ form.username(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        <label for="email">Correo electrónico:</label>
+        {{ form.email(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        <label for="password">Contraseña:</label>
+        {{ form.password(class="form-control") }}
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Registrar</button>
+</form>
+
+{% endblock %}

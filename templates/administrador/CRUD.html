@@ -1,0 +1,28 @@
+{% extends "./base.html" %}
+
+{% block titulo %} CRUD {% endblock %}
+
+{% block contenidobase %}
+<br>
+<br>
+<br>
+<a href="{{ url_for('logout') }}" class="btn btn-danger">Cerrar Sesión</a>
+<h1 id="Titulo" class="text-center" >
+    HERRAMIENTAS DE DESARROLLADOR
+ </h1>
+ <div class="iniciar">
+     <br><br>
+    <form class="formulariosregistro">
+        <div class="login-form">
+            
+    <div><a type="button" class="btn btn-danger" href="/agregar_noticia">Agregar noticia</a> 
+    <a type="button" class="btn btn-light" href="/">Modificar o eliminar noticia</a> 
+    <a type="button" class="btn btn-primary" href="/registrar_administrador">Agregar administrador</a>
+    <a type="button" class="btn btn-danger" href="/vista_publica">Vista noticias</a> </div> <br>
+    <br>
+    <br>
+        <div><a type="button" class="btn btn-danger" href="/agregar_jornada">Agregar jornada</a> 
+    <a type="button" class="btn btn-warning" href="/editar_jornadas">Modificar o eliminar jornada</a> 
+    <a type="button" class="btn btn-primary" href="/vista_jornadas">Vista jornadas Medicas</a> </div> <br><br>
+</div>
+{% endblock %}

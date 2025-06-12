@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+
+{% block titulo %} Registrar Administrador {% endblock %}
+
+{% block contenidobase %}
+<br> <a type="button" class="btn btn-danger" href="/crud">Atras</a>
+<h1 class="text-center">Registrar Administrador</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+        <label for="usuario">Usuario:</label>
+        {{ form.usuario(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        <label for="contraseña">Contraseña:</label>
+        {{ form.contraseña(class="form-control") }}
+    </div>
+
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>
+{% endblock %}

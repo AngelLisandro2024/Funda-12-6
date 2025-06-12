@@ -1,0 +1,79 @@
+{% extends "./base.html" %}
+
+{% block titulo %} Editor {% endblock %}
+
+{% block contenidobase %}
+<section id="primeraSeccion">
+    <div>
+        <h1>Modificar o eliminar noticias</h1>
+    </div>
+    <br><a type="button" class="btn btn-danger" href="/crud">Atras</a>
+</section>
+<section id="Secciones" class="container">
+  <div class="row">
+    <h1 class="text-center">Noticias</h1> <br><br><br>
+      {% for noticia in noticias %}
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="card-body">
+                  <h2>{{ noticia.titulo }}</h2>
+                  <img src="{{ url_for('static', filename='imagenes/' + noticia.imagen) }}" alt="{{ noticia.titulo }}" class="card-img-top">
+                  <p>{{ noticia.descripcion }}</p>
+                  <p><strong>Fecha:</strong> {{ noticia.fecha }}</p>
+                  <a href="{{ url_for('editar_noticia', id=noticia.id) }}" class="btn btn-warning">Editar</a>
+                  <form action="{{ url_for('eliminar_noticia', id=noticia.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+</section>
+<footer class="footer-area pt-60 pb-60 black-bg">
+    <div class="container">
+        <div class="row">
+            <!-- Información sobre los desarrolladores -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <h2 style="color: #ffffff;">WEB Desarrollada y Administrada por</h2>
+                        <p style="color: #ffffff; font-size: 20px;">
+                            Angel Fernandez, Jesus Montilla, Andres Mendoza.
+                        </p>
+                    </div>
+                    <br>
+                    <p style="color: #ffffff; font-size: 18px;">Copyright 2025</p> 
+                    <br>
+                    <a href="/crud" class="btn btn-success">Herramientas de desarrollador</a>
+                </div>
+            </div>
+
+            <!-- Ubicación y contacto -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 style="color: #ffffff;">Ubicación:</h3>
+                    <p style="color: #ffffff;">Dirección: FUNDASALUD está ubicada en el Estado Trujillo, municipio Trujillo, <br>Parroquia Cruz Carrillo Venezuela. Autopista Valera Trujillo.</p>
+                    <h3 style="color: #ffffff;">Teléfonos:</h3>
+                    <p style="color: #ffffff;">
+                        ***************  0272-2367898  *************<br>
+                        ***************  0412-5678987  *************<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="col-lg-4 col-md-12">
+                <div class="footer-widget">
+                    <h3 style="color: #ffffff;">Síguenos en nuestras redes sociales:</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/FundacionTrujillanaDeLaSalud/" target="_blank" style="color: #ffffff;"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://x.com/Fundasaludtru" target="_blank" style="color: #ffffff;"><i class="fab fa-twitter"></i> X</a></li>
+                        <li><a href="https://www.instagram.com/fundasaludtru/" target="_blank" style="color: #ffffff;"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

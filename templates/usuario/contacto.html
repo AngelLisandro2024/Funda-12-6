@@ -1,0 +1,183 @@
+{% extends "./base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenidobase %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sección de Noticias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+          background: linear-gradient(90deg, #121959, #172179, #384194);
+          color: white;
+          text-align: center;
+          padding-top: 50px;
+          position: relative;
+        }
+
+        body::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('static/imagenes/funda2.jpg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: top center;
+          opacity: 0.20; /* Ajusta la opacidad para un efecto más sutil */
+          z-index: -1;
+        }
+        .container {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+        .btn-custom {
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<nav id="barra" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- FUNDASALUD -->
+    <a id="barratitulo" class="navbar-brand me-2" href="#">FUNDASALUD</a>
+    
+              </li>
+                <a class="" href="/inicio">INICIO</a>
+              </li>
+              
+<a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  <a class="" href=""></a>
+              </li>  
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="dropdown">
+  <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="dropdown-menu" id="colormenu">
+    <li><a class="dropdown-item" href="/inicio">Inicio</a></li>
+    <li><a class="dropdown-item" href="/quienes">¿Quiénes somos?</a></li>
+    <li><a class="dropdown-item" href="/vista_jornadas">Jornadas</a></li>
+    <li><a class="dropdown-item" href="/vista_publica">Noticias</a></li>
+    <li><a class="dropdown-item" href="/servicio">Servicios</a></li>
+    <li><a class="dropdown-item" href="/contacto">Contáctanos</a></li>
+  </ul>
+</div>
+                <a class="" href=""></a>
+              </li>   
+  </div>
+</nav>
+          <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="navbar-brand" aria-current="page" href="/inicio">INICIO</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="navbar-brand" href="/quienes">¿QUIENES SOMOS?</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/vista_jornadas">JORNADAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/vista_publica">NOTICIAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/servicio">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="/contacto">CONTACTANOS</a>
+              </li> -->
+              
+<img src="/static/imagenes/cintillo.jpg" alt="cintillo" width="1260">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="display-4">Contáctanos</h1>
+        <h2 class="lead">¡Síguenos y conéctate con nosotros en redes sociales!</h2>
+
+        <div class="d-flex justify-content-center">
+        <a href="https://www.instagram.com/fundasaludtru/" class="btn btn-danger btn-social mx-2">Instagram <i class="fab fa-instagram"></i></a> 
+        <a href="https://x.com/Fundasaludtru" class="btn btn-light btn-social mx-2" >X <i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/FundacionTrujillanaDeLaSalud/" class="btn btn-primary btn-social mx-2">Facebook <i class="fab fa-facebook-f"></i></a>
+        </div> <br>
+        <h3 class="lead">Numeros de telefono:</h3>
+        <h4 class="lead">0272-2367898 * 0412-5678987</h4>
+        <h3 class="lead">Direccion:</h3>
+        <h4 class="lead">FUNDASALUD está ubicada en el estado Trujillo, municipio Trujillo, <br>parroquia Cruz Carrillo Venezuela. Autopista Valera Trujillo.</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+      <h1 class="display-4">¿DONDE NOS UBICAMOS?</h1>
+        <img src="/static/imagenes/ubicacion.png" width="700">
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer class="footer-area pt-60 pb-60 black-bg">
+    <div class="container">
+        <div class="row">
+            <!-- Información sobre los desarrolladores -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <h2 style="color: #ffffff;">WEB Desarrollada y Administrada por</h2>
+                        <p style="color: #ffffff; font-size: 20px;">
+                            Angel Fernandez, Jesus Montilla, Andres Mendoza.
+                        </p>
+                    </div>
+                    <br>
+                    <p style="color: #ffffff; font-size: 18px;">Copyright 2025</p> 
+                    <br>
+                    <a href="/crud" class="btn btn-success">Herramientas de desarrollador</a>
+                </div>
+            </div>
+
+            <!-- Ubicación y contacto -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 style="color: #ffffff;">Ubicación:</h3>
+                    <p style="color: #ffffff;">Dirección: FUNDASALUD está ubicada en el Estado Trujillo, municipio Trujillo, <br>Parroquia Cruz Carrillo Venezuela. Autopista Valera Trujillo.</p>
+                    <h3 style="color: #ffffff;">Teléfonos:</h3>
+                    <p style="color: #ffffff;">
+                        ***************  0272-2367898  *************<br>
+                        ***************  0412-5678987  *************<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="col-lg-4 col-md-12">
+                <div class="footer-widget">
+                    <h3 style="color: #ffffff;">Síguenos en nuestras redes sociales:</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/FundacionTrujillanaDeLaSalud/" target="_blank" style="color: #ffffff;"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://x.com/Fundasaludtru" target="_blank" style="color: #ffffff;"><i class="fab fa-twitter"></i> X</a></li>
+                        <li><a href="https://www.instagram.com/fundasaludtru/" target="_blank" style="color: #ffffff;"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
+
